@@ -2,6 +2,6 @@
 layout: default
 ---
 
-# Andy Fillebrown
+# andy fillebrown
 
-![Me](https://andy-fillebrown.github.io/assets/images/me.jpg)
+![me](https://andy-fillebrown.github.io/assets/images/me.jpg)
