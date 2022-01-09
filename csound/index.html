@@ -1,5 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <title>Csound Editor</title>
 </head>
 <body>
-test 2
+  <div class="tab-header">
+    <button class="tab"
+        onclick="openTab(event, 'Editor')">
+      Editor
+    </button>
+    <button class="tab"
+        onclick="openTab(event, 'Output')">
+      Output
+    </button>
+    <button class="tab"
+        onclick="openTab(event, 'Console')">
+      Console
+    </button>
+  </div>
+  <div id="Editor" class="tab-body">
+    Editor
+  </div>
+  <div id="Output" class="tab-body">
+    Output
+  </div>
+  <div id="Console" class="tab-body">
+    Console
+  </div>
 </body>
