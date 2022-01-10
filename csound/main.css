@@ -18,7 +18,7 @@ Style the buttons that are used to open the tab content.
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s;
+  /*transition: 0.3s;*/
 }
 
 /*
