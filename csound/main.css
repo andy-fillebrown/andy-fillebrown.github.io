@@ -1,8 +1,8 @@
 
 /*
-Style the tab.
+Style the tab header.
 */
-.tab {
+.tab-header {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
@@ -29,7 +29,7 @@ Change background color of buttons on hover.
 }
 
 /*
-Create an active/current tablink class
+Create an active/current tab class.
 */
 .tab.active {
   background-color: #ccc;
