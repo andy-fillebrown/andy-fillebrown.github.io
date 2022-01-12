@@ -1,4 +1,33 @@
 
+const csdText =
+`<CsoundSynthesizer>
+<CsOptions>
+
+-n
+-d
+-m0d
+
+</CsOptions>
+<CsInstruments>
+
+nchnls = 2	
+0dbfs = 1
+
+instr 1
+    a1 oscili 0.1, 440
+    outs a1, a1
+endin	
+
+</CsInstruments>
+<CsScore>
+
+i1 0 10
+
+</CsScore>
+</CsoundSynthesizer>
+`
+
+
 function openTab(e, tabName) {
   // Hide all tab-body elements.
   var tabBodyElements =

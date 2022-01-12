@@ -56,10 +56,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-modelist.min.js" integrity="sha512-DVhsjVBjwWmU6Tb43nTK5ZhIUVdwOEiKPm8KTk3pE28oN/ZUGCJm7ufcUZq8yo2uYFkNfPZ9aed16cAKEj/2gw==" crossorigin="anonymous"></script>
   <script type="module">
     const editor = ace.edit("Editor-ACE"); // "Editor-ACE" is DOM element's id.
-    //editor.setValue(csdCode);
+    editor.setValue(csdCode);
     //editor.setTheme("ace/theme/monokai");
     editor.session.setMode("ace/mode/csound_orchestra");
-    editor.setValue("Editor", 1) // The 1 moves the cursor to the end.
+    editor.setValue(csdCode, 1) // The 1 moves the cursor to the end.
     editor.setFontSize(16);
   </script>
 </body>
