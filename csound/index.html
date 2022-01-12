@@ -44,7 +44,7 @@
     </button>
   </div>
   <div id="Editor" class="tab-body">
-    Editor
+    <div id="Editor-ACE"></div>
   </div>
   <div id="Output" class="tab-body">
     Output
@@ -53,7 +53,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-GZ1RIgZaSc8rnco/8CXfRdCpDxRCphenIiZ2ztLy3XQfCbQUSCuk8IudvNHxkRA3oUg6q0qejgN/qqyG1duv5Q==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-modelist.min.js" integrity="sha512-DVhsjVBjwWmU6Tb43nTK5ZhIUVdwOEiKPm8KTk3pE28oN/ZUGCJm7ufcUZq8yo2uYFkNfPZ9aed16cAKEj/2gw==" crossorigin="anonymous"></script>
   <script type="module">
-    const editor = ace.edit("Editor"); // "Editor" is DOM element's id.
+    const editor = ace.edit("Editor-ACE"); // "Editor-ACE" is DOM element's id.
     //editor.setValue(csdCode);
     editor.setTheme("ace/theme/monokai");
     editor.session.setMode("ace/mode/csound_orchestra");
