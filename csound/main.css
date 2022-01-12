@@ -1,11 +1,15 @@
-html {
+html,
+body{
   height: 100%;
+  margin: 0;
 }
 
-body {
-  min-height: 100%;
+#Body {
+  display: flex;
+  flex-flow: column;
 }
 
+/*
 #Editor {
   position: relative;
   top: 0;
@@ -20,12 +24,13 @@ body {
   left: 0;
   right: 0;
 }
+*/
 
 /*
 Style the tab header.
 */
 .tab-header {
-  overflow: hidden;
+  flex: 0 1 auto;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
@@ -62,6 +67,7 @@ Style the tab content.
 */
 .tab-body {
   display: none;
+  flex: 1 1 auto;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;

@@ -33,21 +33,23 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="tab-header">
-    <button class="tab"
-        onclick="openTab(event, 'Editor')">
-      Editor
-    </button>
-    <button class="tab"
-        onclick="openTab(event, 'Output')">
+  <div id="Body">
+    <div class="tab-header">
+      <button class="tab"
+          onclick="openTab(event, 'Editor')">
+        Editor
+      </button>
+      <button class="tab"
+          onclick="openTab(event, 'Output')">
+        Output
+      </button>
+    </div>
+    <div id="Editor" class="tab-body">
+      <div id="Editor-ACE"></div>
+    </div>
+    <div id="Output" class="tab-body">
       Output
-    </button>
-  </div>
-  <div id="Editor" class="tab-body">
-    <div id="Editor-ACE"></div>
-  </div>
-  <div id="Output" class="tab-body">
-    Output
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-GZ1RIgZaSc8rnco/8CXfRdCpDxRCphenIiZ2ztLy3XQfCbQUSCuk8IudvNHxkRA3oUg6q0qejgN/qqyG1duv5Q==" crossorigin="anonymous"></script>
