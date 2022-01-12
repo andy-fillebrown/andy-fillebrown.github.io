@@ -52,9 +52,6 @@ Style the tab content.
 .tab-body {
   display: none;
   flex: 1 1 auto;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
 }
 
 #Editor-ACE {
