@@ -11,23 +11,6 @@ body{
 }
 
 /*
-#Editor {
-  position: relative;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#Editor-ACE {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-*/
-
-/*
 Style the tab header.
 */
 .tab-header {
@@ -72,4 +55,8 @@ Style the tab content.
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+#Editor-ACE {
+  height: 100%;
 }
