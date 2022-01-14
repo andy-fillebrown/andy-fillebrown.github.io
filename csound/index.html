@@ -30,26 +30,18 @@
   <script>
       consolePanel.enable();
   </script>
-
-  <!--
-  Local files
-  -->
-  <script src="index.js" type="module"></script>
-  <link rel="stylesheet" href="main.css">
   
   <!--
   ACE editor
   -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-GZ1RIgZaSc8rnco/8CXfRdCpDxRCphenIiZ2ztLy3XQfCbQUSCuk8IudvNHxkRA3oUg6q0qejgN/qqyG1duv5Q==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-modelist.min.js" integrity="sha512-DVhsjVBjwWmU6Tb43nTK5ZhIUVdwOEiKPm8KTk3pE28oN/ZUGCJm7ufcUZq8yo2uYFkNfPZ9aed16cAKEj/2gw==" crossorigin="anonymous"></script>
-  <script type="module">
-    const editor = ace.edit("Editor-ACE"); // "Editor-ACE" is DOM element's id.
-    editor.setValue(csdText);
-    //editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/csound_orchestra");
-    editor.setValue(csdText, 1) // The 1 moves the cursor to the end.
-    editor.setFontSize(16);
-  </script>
+
+  <!--
+  Local files
+  -->
+  <script src="index.js" type="module"></script>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <div id="Body">
