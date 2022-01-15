@@ -77,9 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
-const onEditorContentsChanged = () => {
-  localStorage.setItem("csdText", editor.getValue())
-  
+const updateEditorHeight = () => {
   document.getElementById("Editor-ACE").style.height =
     ""
     + (editor.getSession().getScreenLength()
@@ -90,13 +88,19 @@ const onEditorContentsChanged = () => {
   
   editor.resize()
 }
-onEditorContentsChanged()
-document.addEventListener("DOMContentLoaded", onEditorContentsChanged)
+
+const onEditorContentsChanged = () => {
+  localStorage.setItem("csdText", editor.getValue())
+  updateEditorHeight()
+  
+}
+
+document.addEventListener("DOMContentLoaded", updateEditorHeight)
 editor.getSession().on("change", onEditorContentsChanged)
 let initEditorHeightTimer = setInterval(() => {
   if (editor.renderer.lineHeight > 0) {
     clearInterval(initEditorHeightTimer)
-    onEditorContentsChanged()
+    updateEditorHeight()
   }
 }, 100)
 
