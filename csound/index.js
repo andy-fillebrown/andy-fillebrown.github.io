@@ -82,6 +82,7 @@ const onEditorContentsChanged = () => {
   editor.resize()
 }
 onEditorContentsChanged()
+document.addEventListener("DOMContentLoaded", onEditorContentsChanged)
 editor.getSession().on("change", onEditorContentsChanged)
 
 
