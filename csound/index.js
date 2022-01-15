@@ -71,7 +71,7 @@ viewport.addEventListener('resize', viewportHandler)
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const previousCsdText = localStorage("csdText")
+  const previousCsdText = localStorage.getItem("csdText")
   if (previousCsdText != null) {
     editor.setValue(previousCsdText)
   }
