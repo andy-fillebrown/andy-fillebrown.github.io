@@ -31,7 +31,7 @@ const editor = ace.edit("Editor-ACE"); // "Editor-ACE" is DOM element's id.
 editor.setValue(csdText);
 //editor.setTheme("ace/theme/monokai");
 editor.session.setMode("ace/mode/csound_orchestra");
-editor.setValue(csdText, 1) // The 1 moves the cursor to the end.
+//editor.setValue(csdText, 1) // The 1 moves the cursor to the end.
 editor.setFontSize(16);
 
 
