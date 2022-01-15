@@ -29,7 +29,7 @@ i1 0 10
 
 const editor = ace.edit("Editor-ACE"); // "Editor-ACE" is DOM element's id.
 editor.setValue(csdText);
-editor.moveCursorTo(0, 0)
+//editor.moveCursorTo(0, 0)
 //editor.setTheme("ace/theme/monokai");
 editor.session.setMode("ace/mode/csound_orchestra");
 //editor.setValue(csdText, 1) // The 1 moves the cursor to the end.
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const previousCsdText = localStorage.getItem("csdText")
   if (previousCsdText != null) {
     editor.setValue(previousCsdText)
-    editor.moveCursorTo(0, 0)
+    //editor.moveCursorTo(0, 0)
   }
 })
 
