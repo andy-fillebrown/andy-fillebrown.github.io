@@ -56,3 +56,26 @@ function openTab(e, tabName) {
     "block"
   e.currentTarget.className += " active"
 }
+
+
+let viewport = window.visualViewport
+const viewportHandler = () {
+  let body = document.body
+  body.style.width = '' + viewport.width + 'px'
+  body.style.height = '' + viewport.height + 'px'
+}
+viewport.addEventListener('scroll', viewportHandler)
+viewport.addEventListener('resize', viewportHandler)
+
+
+
+
+
+
+
+
+
+
+
+
+
