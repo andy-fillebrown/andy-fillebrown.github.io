@@ -34,6 +34,7 @@ editor.setValue(csdText);
 editor.session.setMode("ace/mode/csound_orchestra");
 //editor.setValue(csdText, 1) // The 1 moves the cursor to the end.
 editor.setFontSize(16);
+editor.setAutoScrollEditorIntoView(false)
 
 
 function openTab(e, tabName) {
@@ -80,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const updateEditorHeight = () => {
-  const scrollX = window.scrollX
-  const scrollY = window.scrollY
+  //const scrollX = window.scrollX
+  //const scrollY = window.scrollY
   
   document.getElementById("Editor-ACE").style.height =
     ""
@@ -92,7 +93,7 @@ const updateEditorHeight = () => {
     + "px"
   
   editor.resize()
-  window.scrollTo(scrollX, scrollY)
+  //window.scrollTo(scrollX, scrollY)
 }
 
 const onEditorContentsChanged = () => {
