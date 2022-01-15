@@ -84,9 +84,9 @@ const onEditorContentsChanged = () => {
 onEditorContentsChanged()
 document.addEventListener("DOMContentLoaded", onEditorContentsChanged)
 editor.getSession().on("change", onEditorContentsChanged)
-let initEditorHeightTimer = setTimeout(() => {
+let initEditorHeightTimer = setInterval(() => {
   if (editor.renderer.lineHeight > 0) {
-    clearTimeout(initEditorHeightTimer)
+    clearInterval(initEditorHeightTimer)
     onEditorContentsChanged()
   }
 }, 100)
