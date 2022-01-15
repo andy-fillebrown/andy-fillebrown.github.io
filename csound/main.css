@@ -1,6 +1,6 @@
 html,
 body{
-  height: 100%;
+  height: 100vh;
   margin: 0;
 }
 
@@ -55,5 +55,5 @@ Style the tab content.
 }
 
 #Editor-ACE {
-  height: 50%;
-}
+  height: 100%;
+  }
