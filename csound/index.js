@@ -70,9 +70,19 @@ viewport.addEventListener('resize', viewportHandler)
 */
 
 
-
-
-
+const onEditorContentsChanged = () => {
+  document.getElementById("Editor-ACE").style.height =
+    ""
+    + (editor.getSession().getScreenLength()
+        * editor.renderer.lineHeight
+        + editor.renderer.scrollBar.getWidth()
+      )
+    + "px"
+  
+  editor.resize()
+}
+onEditorContentsChanged()
+editor.getSession().on("change", onEditorContentsChanged)
 
 
 

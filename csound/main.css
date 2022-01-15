@@ -5,7 +5,7 @@ body {
 }
 
 #Body {
-  display: flex;
+  /*display: flex;*/
   flex-flow: column;
   height: 100%;
 }
@@ -55,5 +55,5 @@ Style the tab content.
 }
 
 #Editor-ACE {
-  height: 50%;
+  /*height: 50%;*/
 }
