@@ -17,7 +17,9 @@ Style the tab header.
   /*flex: 0 1 auto;*/
   /*border: 1px solid #ccc;*/
   position: fixed;
+  top: 0;
   z-index: 100;
+  width: 100%;
   background-color: #f1f1f1;
 }
 
@@ -58,5 +60,5 @@ Style the tab content.
 
 #Editor-ACE {
   /*height: 50%;*/
-  margin: 96px 0 96px 0;
+  margin: 128px 0 256px 0;
 }
