@@ -70,7 +70,16 @@ viewport.addEventListener('resize', viewportHandler)
 */
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const previousCsdText = localStorage("csdText")
+  if (previousCsdText != null) {
+    editor.setValue(previousCsdText)
+  }
+}
+
 const onEditorContentsChanged = () => {
+  localStorage.setItem("csdText", editor.getValue())
+  
   document.getElementById("Editor-ACE").style.height =
     ""
     + (editor.getSession().getScreenLength()
@@ -92,8 +101,10 @@ let initEditorHeightTimer = setInterval(() => {
 }, 100)
 
 
+/*
 window.addEventListener("beforeunload", (e) => {
   e.preventDefault()
   e.returnValue = ""
 })
+*/
 
