@@ -4,6 +4,18 @@ body {
   margin: 0;
 }
 
+/*
+Prevent pull down refresh.
+*/
+body {
+  overflow: hidden;
+}
+#Body {
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+  
 #Body {
   /*display: flex;*/
   flex-flow: column;
