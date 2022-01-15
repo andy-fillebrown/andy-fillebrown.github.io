@@ -59,7 +59,7 @@ function openTab(e, tabName) {
 
 
 let viewport = window.visualViewport
-const viewportHandler = () {
+const viewportHandler = () => {
   let body = document.body
   body.style.width = '' + viewport.width + 'px'
   body.style.height = '' + viewport.height + 'px'
