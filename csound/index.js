@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (previousCsdText != null) {
     editor.setValue(previousCsdText)
   }
-}
+})
 
 const onEditorContentsChanged = () => {
   localStorage.setItem("csdText", editor.getValue())
