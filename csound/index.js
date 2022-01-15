@@ -58,6 +58,7 @@ function openTab(e, tabName) {
 }
 
 
+/*
 let viewport = window.visualViewport
 const viewportHandler = () => {
   let body = document.body
@@ -66,7 +67,7 @@ const viewportHandler = () => {
 }
 viewport.addEventListener('scroll', viewportHandler)
 viewport.addEventListener('resize', viewportHandler)
-
+*/
 
 
 
