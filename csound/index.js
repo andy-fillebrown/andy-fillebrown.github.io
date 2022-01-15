@@ -80,6 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const updateEditorHeight = () => {
+  const scrollX = window.scrollX
+  const scrollY = window.scrollY
+  
   document.getElementById("Editor-ACE").style.height =
     ""
     + (editor.getSession().getScreenLength()
@@ -89,6 +92,7 @@ const updateEditorHeight = () => {
     + "px"
   
   editor.resize()
+  window.scrollTo(scrollX, scrollY)
 }
 
 const onEditorContentsChanged = () => {
