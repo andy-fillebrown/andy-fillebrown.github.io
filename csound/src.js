@@ -203,32 +203,32 @@ const buttonPlay = document.getElementById("Button-Play")
 const buttonStop = document.getElementById("Button-Stop")
 setDomElementVisibility("Button-Stop", false)
 
-buttonReset.onclick = () => {
+buttonReset.onclick = buttonReset.ondblclick = () => {
   editor.setValue(csdText)
   editor.moveCursorTo(0, 0)
 }
 
-buttonUndo.onclick = () => {
+buttonUndo.onclick = buttonUndo.ondblclick = () => {
   editor.session.getUndoManager().undo()
 }
 
-buttonRedo.onclick = () => {
+buttonRedo.onclick = buttonRedo.ondblclick = () => {
   editor.session.getUndoManager().redo()
 }
 
-buttonEditor.onclick = async () => {
+buttonEditor.onclick = buttonEditor.ondblclick = async () => {
   console.debug("Editor button clicked.")
   showEditor()
   hideConsole()
 }
 
-buttonConsole.onclick = async () => {
+buttonConsole.onclick = buttonConsole.ondblclick = async () => {
   console.debug("Console button clicked.")
   showConsole()
   hideEditor()
 }
 
-buttonPlay.onclick = async () => {
+buttonPlay.onclick = buttonPlay.ondblclick = async () => {
   setDomElementVisibility("Button-Play", false)
   setDomElementVisibility("Button-Stop", true)
   console.log("Play button clicked.")
@@ -239,7 +239,7 @@ buttonPlay.onclick = async () => {
   await csoundPlayOutput()
 }
 
-buttonStop.onclick = csoundStop
+buttonStop.onclick = buttonStop.ondblclick = csoundStop
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Echo Javascript console to HTML element
