@@ -17,8 +17,7 @@ const csdText =
 `<CsoundSynthesizer>
 <CsOptions>
 
--n
--d
+-nd
 
 </CsOptions>
 <CsInstruments>
