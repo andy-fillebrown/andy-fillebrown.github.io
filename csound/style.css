@@ -39,6 +39,22 @@ button {
     background-size: contain;
 }
 
+.buttonsSpaceFiller {
+    height: 204px;
+}
+
+#Button-Reset {
+    background-image: url("button-reset.svg");
+}
+
+#Button-Undo {
+    background-image: url("button-undo.svg");
+}
+
+#Button-Redo {
+    background-image: url("button-redo.svg");
+}
+
 #Button-Editor {
     background-image: url("button-editor.svg");
 }

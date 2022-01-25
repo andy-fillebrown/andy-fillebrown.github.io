@@ -48,6 +48,7 @@ editor.session.setOptions({
 editor.setFontSize(16);
 editor.setValue(csdText);
 editor.moveCursorTo(0, 0)
+editor.session.setUndoManager(new ace.UndoManager())
 
 document.addEventListener("DOMContentLoaded", () => {
   const previousCsdText = localStorage.getItem("csdText")
@@ -193,11 +194,27 @@ const showConsole = () => setConsoleVisibility(true)
 const hideConsole = () => setConsoleVisibility(false)
 hideConsole()
 
+const buttonReset = document.getElementById("Button-Reset")
+const buttonUndo = document.getElementById("Button-Undo")
+const buttonRedo = document.getElementById("Button-Redo")
 const buttonEditor = document.getElementById("Button-Editor")
 const buttonConsole = document.getElementById("Button-Console")
 const buttonPlay = document.getElementById("Button-Play")
 const buttonStop = document.getElementById("Button-Stop")
 setDomElementVisibility("Button-Stop", false)
+
+buttonReset.onclick = () => {
+  editor.setValue(csdText)
+  editor.moveCursorTo(0, 0)
+}
+
+buttonUndo.onclick = () => {
+  editor.session.getUndoManager().undo()
+}
+
+buttonRedo.onclick = () => {
+  editor.session.getUndoManager().redo()
+}
 
 buttonEditor.onclick = async () => {
   console.debug("Editor button clicked.")
