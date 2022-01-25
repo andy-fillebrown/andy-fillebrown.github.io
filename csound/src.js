@@ -61,7 +61,7 @@ editor.getSession().on("change", () => {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Csound
 
-const maxDurationInMinutes = 10
+const maxDurationInMinutes = 1
 
 let csound = null
 let offlineAudioContext = null
