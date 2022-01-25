@@ -39,16 +39,20 @@ button {
     background-size: contain;
 }
 
-#Button-Play {
-    background-image: url("button-play.svg");
-}
-
 #Button-Editor {
     background-image: url("button-editor.svg");
 }
 
 #Button-Console {
     background-image: url("button-console.svg");
+}
+
+#Button-Play {
+    background-image: url("button-play.svg");
+}
+
+#Button-Stop {
+    background-image: url("button-stop.svg");
 }
 
 #Editor,
