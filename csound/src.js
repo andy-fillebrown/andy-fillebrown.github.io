@@ -16,19 +16,26 @@ viewport.addEventListener("resize", onViewportResized)
 const csdText =
 `<CsoundSynthesizer>
 <CsOptions>
+
 -n
 -d
+
 </CsOptions>
 <CsInstruments>
+
 nchnls = 2
 0dbfs = 1
+
 instr 1
-    a1 oscili 0.1, 440
-    outs a1, a1
+  a1 oscili 0.1, 440
+  outs a1, a1
 endin
+
 </CsInstruments>
 <CsScore>
+
 i1 0 10
+
 </CsScore>
 </CsoundSynthesizer>
 `
