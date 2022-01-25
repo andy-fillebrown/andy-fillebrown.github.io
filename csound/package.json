@@ -1,0 +1,10 @@
+{
+  "displayName": "ios-website-testing",
+  "scripts": {
+    "start": "webpack serve --config ./webpack.js --mode development --progress --color --https"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

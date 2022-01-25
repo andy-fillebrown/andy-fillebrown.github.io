@@ -1,0 +1,71 @@
+html,
+body {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+#Body {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: darkgray;
+}
+
+#Buttons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 100%;
+}
+
+button {
+    height: 64px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#Button-Play {
+    background-image: url("button-play.svg");
+}
+
+#Button-Editor {
+    background-image: url("button-editor.svg");
+}
+
+#Button-Console {
+    background-image: url("button-console.svg");
+}
+
+#Editor,
+#Console {
+    position: absolute;
+    left: 64px;
+    right: 0;
+    top: 0;
+    height: 100%;
+    bottom: 0;
+}
+
+#Console {
+    background-color: #a6b4bb;
+    overflow: auto
+}
+
+#Editor-ACE {
+    height: 100%;
+}

@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!--
+  ACE editor
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-GZ1RIgZaSc8rnco/8CXfRdCpDxRCphenIiZ2ztLy3XQfCbQUSCuk8IudvNHxkRA3oUg6q0qejgN/qqyG1duv5Q==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-modelist.min.js" integrity="sha512-DVhsjVBjwWmU6Tb43nTK5ZhIUVdwOEiKPm8KTk3pE28oN/ZUGCJm7ufcUZq8yo2uYFkNfPZ9aed16cAKEj/2gw==" crossorigin="anonymous"></script>
+  
+  <!--
+  Disable iOS scroll bounce
+  -->
+  <script src="inobounce.min.js"></script>
+
+  <!--
+  Csound
+  -->
+  <script type="module">
+    import { Csound } from "https://unpkg.com/@csound/browser/dist/csound.js"
+    window.Csound = Csound
+  </script>
+
+  <!--
+  Echo Javascript console to HTML element
+  -->
+  <script src="//cdn.rawgit.com/Alorel/console-log-html/master/console-log-html.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="Body">
+    <div id="Buttons">
+      <button id="Button-Editor"></button>
+      <button id="Button-Console"></button>
+      <button id="Button-Play"></button>
+      <button id="Button-Stop">Stop</button>
+    </div>
+    <div id="Editor">
+      <div id="Editor-ACE"></div>
+    </div>
+    <div id="Console">
+      <ul id="Console-Output"></ul>
+    </div>
+  </div>
+  <script src="src.js"></script>
+</body>
+</html>
