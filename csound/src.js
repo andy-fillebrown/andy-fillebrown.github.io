@@ -248,10 +248,11 @@ const consoleOutput = document.getElementById("Console-Output")
 ConsoleLogHTML.connect(consoleOutput, {}, false, true, true);
 
 let previousConsoleOutputHeight = 0
-setInterval(() => {
+let observer = new MutationObserver((mutationsList, observer) => {
   const consoleOutputHeight = consoleOutput.offsetHeight
   if (previousConsoleOutputHeight != consoleOutputHeight) {
     previousConsoleOutputHeight = consoleOutputHeight
     document.getElementById("Console").scrollTop = consoleOutputHeight
   }
-}, 100)
+})
+observer.observe(consoleOutput, { characterData: false, childList: true, attributes: false })
