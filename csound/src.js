@@ -27,8 +27,8 @@ nchnls = 2
 0dbfs = 1
 
 instr 1
-  a1 oscili 0.1, 440
-  outs a1, a1
+   a1 oscili 0.1, 440
+   outs a1, a1
 endin
 
 </CsInstruments>
@@ -41,7 +41,11 @@ i1 0 10
 `
 
 const editor = ace.edit("Editor-ACE"); // "Editor-ACE" is DOM element's id.
-editor.session.setMode("ace/mode/csound_orchestra");
+editor.session.setOptions({
+  mode: "ace/mode/csound_orchestra",
+  tabSize: 3,
+  useSoftTabs: true
+})
 editor.setFontSize(16);
 editor.setValue(csdText);
 editor.moveCursorTo(0, 0)
