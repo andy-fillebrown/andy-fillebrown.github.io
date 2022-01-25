@@ -74,6 +74,7 @@ let source = null
 let duration = 0
 let isCompiled = false
 let isPlaying = false
+let playbackTimer = null
 
 const wait = ms => new Promise(res => setTimeout(res, ms));
 
@@ -126,7 +127,7 @@ const csoundCompile = async () => {
 const csoundPerform = async () => {
   if (isCompiled) {
     console.debug(`Performing Csound score ...`)
-    await csound.start()
+    csound.start()
     offlineAudioBuffer = await offlineAudioContext.startRendering()
     console.debug(`Performing Csound score - done`)
   }
@@ -142,13 +143,31 @@ const csoundPlayOutput = async () => {
   source.connect(audioContext.destination)
   source.start()
   duration = Number((await csound.getCurrentTimeSamples()) / BigInt(48000)) * 1000
-  setTimeout(() => {
-    source.stop()
-    setDomElementVisibility("Button-Stop", false)
-    setDomElementVisibility("Button-Play", true)
-    isPlaying = false
-    console.debug(`Playing Csound output - done`)
+  playbackTimer = setTimeout(() => {
+    csoundStop()
   }, duration)
+  csound.destroy()
+}
+
+const csoundStop = () => {
+  setDomElementVisibility("Button-Stop", false)
+  setDomElementVisibility("Button-Play", true)
+
+  isPlaying = false
+
+  if (playbackTimer != null) {
+    clearTimeout(playbackTimer)
+  }
+
+  if (source != null) {
+    source.stop()
+  }
+
+  if (csound != null) {
+    csound.stop()
+  }
+
+  console.debug(`Playing Csound output - done`)
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -203,34 +222,7 @@ buttonPlay.onclick = async () => {
   await csoundPlayOutput()
 }
 
-buttonStop.onclick = async () => {
-  setDomElementVisibility("Button-Stop", false)
-  setDomElementVisibility("Button-Play", true)
-  console.log("Stop button clicked.")
-
-  isPlaying = false
-
-  if (csound != null) {
-    await csound.stop()
-  }
-  
-  // if (offlineAudioContext != null) {
-  //   console.log(`offlineAudioContext.state == ${offlineAudioContext.state}`)
-  //   if (offlineAudioContext.state == 'running') {
-  //     await offlineAudioContext.suspend(offlineAudioContext.currentTime)
-  //   }
-  // }
-
-  if (source != null) {
-    console.log("Stopping source node ...")
-    source.stop()
-    console.log("Stopping source node - done")
-  }
-
-  // if (!!audioContext) {
-  //   audioContext.stop()
-  // }
-}
+buttonStop.onclick = csoundStop
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Echo Javascript console to HTML element
